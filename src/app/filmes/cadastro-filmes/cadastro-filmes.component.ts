@@ -16,7 +16,7 @@ import { Alerta } from 'src/app/shared/models/alerta';
 export class CadastroFilmesComponent implements OnInit {
 
   id: number;
-  cadastro: FormGroup;
+  cadastro: FormGroup; // FormBuilder cria um formulário que permite ao Angular manipular as informações contidas.
   generos: Array<string>;
 
   constructor(public validacao: ValidarCamposService,
@@ -64,7 +64,7 @@ export class CadastroFilmesComponent implements OnInit {
 
   private criarFormulario(filme: Filme): void {
     this.cadastro = this.fb.group({
-      titulo: [filme.titulo, [Validators.required, Validators.minLength(2), Validators.maxLength(256)]],
+      titulo: [filme.titulo, [Validators.required, Validators.minLength(2), Validators.maxLength(256)]], // Validators.required = campo obrigatório. Validator.minLength = tamanho mínimo esperado. Validators.maxLength = valor máximo esperado.
       urlFoto: [filme.urlFoto, [Validators.minLength(10)]],
       dtLancamento: [filme.dtLancamento, [Validators.required]],
       descricao: [filme.descricao],

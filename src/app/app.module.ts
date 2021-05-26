@@ -14,6 +14,7 @@ import { RodapeComponent } from './shared/components/rodape/rodape.component';
 import { AlertaComponent } from './shared/components/alerta/alerta.component';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,7 +31,7 @@ import { AlertaComponent } from './shared/components/alerta/alerta.component';
     AppRoutingModule
   ],
   entryComponents: [AlertaComponent],
-  providers: [{ provide: MAT_DATE_LOCALE, useValue: 'pt' }],
+  providers: [{ provide: MAT_DATE_LOCALE, useValue: 'pt' }], // provide é do material date local e estamos setando para usar datas no formato pt
   bootstrap: [AppComponent]
 })
 export class AppModule { }
